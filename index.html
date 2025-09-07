@@ -6,26 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DayZ Server & Discord Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        // Initialize EmailJS (replace with your actual user ID from EmailJS dashboard)
-        (function () {
-            emailjs.init("YOUR_PUBLIC_KEY");
-        })();
-
-        function sendEmail(event) {
-            event.preventDefault();
-
-            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", "#contact-form")
-                .then(() => {
-                    alert("Message sent successfully!");
-                    document.getElementById("contact-form").reset();
-                }, (error) => {
-                    alert("Failed to send message. Please try again later.");
-                    console.error(error);
-                });
-        }
-    </script>
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans">
@@ -39,38 +19,43 @@
             Started</a>
     </section>
 
-    <!-- Services -->
+    <!-- Services Overview -->
     <section id="services" class="max-w-5xl mx-auto py-16 px-6">
-        <h2 class="text-3xl font-bold mb-10 text-center">Services</h2>
+        <h2 class="text-3xl font-bold mb-10 text-center">Service Overview</h2>
         <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Category Example -->
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Server Setup</h3>
-                <p>Full Xbox DayZ server configuration: rules, economy, restarts, custom loadouts, loot pool, and custom
+                <p>Full Xbox DayZ server configuration: rules, economy, restarts, custom loadouts, loot pool, and
                     spawns.</p>
             </div>
+
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Discord Setup</h3>
                 <p>Custom Discord server: roles, bots, branding, and moderation tools to build your community hub.</p>
             </div>
+
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Bot/Shop Setup</h3>
-                <p>configuration of discord bot (Hulk's Killfeed) and shop system.</p>
+                <p>Configuration of Hulk's Killfeed (or similar) bot and Discord shop system.</p>
             </div>
+
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Community Growth</h3>
                 <p>Marketing, player recruitment, events, and retention strategies to grow and sustain your server.</p>
             </div>
+
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Custom Website</h3>
                 <p>A single page website to help promote your community server. <em
-                        style="text-decoration: underline;">(Additional $20/m for hosting)</em></p>
+                        style="text-decoration: underline;">(Additional $5/m for hosting)</em></p>
             </div>
+
             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Bug Fixes</h3>
-                <p>I will take a look around and help resolve any issues you might be experiencing; even on servers I
-                    did not set up</p>
+                <p>I can help resolve issues on your servers or Discords—even ones I didn’t set up originally.</p>
             </div>
-        </div>
     </section>
 
     <!-- Pricing -->
@@ -82,46 +67,132 @@
             <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Single Setup</h3>
                 <p class="mb-4">Choose <span class="font-semibold">one</span>: Server, Website, or Discord setup.</p>
-                <p class="text-2xl font-bold mb-4">$50</p>
+                <p class="text-2xl font-bold mb-4">$25 – $75</p>
             </div>
 
             <!-- Two Services -->
             <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Double Setup</h3>
                 <p class="mb-4">Any <span class="font-semibold">two</span>: Server, Website, or Discord setup.</p>
-                <p class="text-2xl font-bold mb-4">$90</p>
+                <p class="text-2xl font-bold mb-4">$70 – $115</p>
             </div>
 
-            <!-- Basics + Branding -->
+            <!-- Complete Basics -->
             <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-2 border-blue-600">
                 <h3 class="text-xl font-semibold mb-3">Complete Basics</h3>
-                <p class="mb-4">All three setups <br> + custom logo, banner, or marketing materials.</p>
-                <p class="text-2xl font-bold mb-4">$150</p>
+                <p class="mb-4">All three setups <br> + custom marketing materials.</p>
+                <p class="text-2xl font-bold mb-4">$115 – $190</p>
             </div>
 
             <!-- Advanced Setup -->
             <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Advanced Setup</h3>
-                <p class="mb-4">Complete setup <br> + 1 month support <br> + all the bells & whistles.</p>
-                <p class="text-2xl font-bold mb-4">$175</p>
+                <p class="mb-4">More in-depth setup <br> + 1 month support <br> + all the bells & whistles.</p>
+                <p class="text-2xl font-bold mb-4">$130 – $220</p>
             </div>
 
             <!-- Debugging -->
             <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Debugging</h3>
                 <p class="mb-4">Fix issues with existing servers, websites, or Discords.</p>
-                <p class="text-2xl font-bold mb-4">$10/hr</p>
+                <p class="text-2xl font-bold mb-4">$10 / hr</p>
             </div>
 
             <!-- Monthly Support -->
             <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
                 <h3 class="text-xl font-semibold mb-3">Monthly Support</h3>
-                <p class="mb-4">Ongoing help with updates, community management, and optimizations.<br><br>
-                    <span class="text-sm text-gray-400">($20 discount on setups when combined with monthly
-                        support)</span>
+                <p class="mb-4">Ongoing help with updates, community management, and optimizations.
                 </p>
-                <p class="text-2xl font-bold mb-4">$50/mo</p>
+                <p class="text-2xl font-bold mb-4">$20 – $65+ / mo</p>
             </div>
+
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 text-center text-gray-300">
+            <p class="italic">💡 Prices may vary depending on your specific needs, server size, and requested
+                customizations.</p>
+                            <p class="italic">Delivery is 1 week with 3 day delivery available for $25 extra</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section id="detailed-services" class="max-w-2xl mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Detailed Services</h2>
+        <div class="space-y-8">
+
+            <!-- Service Tile -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Server Adjustments</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Adjust infected population</li>
+                    <li>Loot balancing (zones, weapons, tier adjustments)</li>
+                    <li>Location changes (oil rigs, gas zone edits, etc.)</li>
+                    <li>Custom spawn control (add/remove/custom)</li>
+                    <li>Custom loadouts (starter kits, special gear)</li>
+                    <li>Custom Bases and Building Placements</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Vehicles</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Add complete vehicles or custom kits</li>
+                    <li>Custom spawn points</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Immersion & Gameplay</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Unique events & custom mechanics</li>
+                    <li>Jobs and bounty systems</li>
+                    <li>Staff-driven roleplay events</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Website Development</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Custom websites for promotion & engagement</li>
+                    <li>Event announcements (past & future)</li>
+                    <li>Showcase videos & highlights</li>
+                    <li>Server stats integration</li>
+                    <li>Discord integration for live updates</li>
+                    <li><strong>Built for growing your community!</strong></li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Discord Setup</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Build new or optimize existing servers</li>
+                    <li>Configure bots (economy, shops, tickets)</li>
+                    <li>Custom automation for engagement</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Community Management</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Grow population (ads, outreach)</li>
+                    <li>Admin/moderator services</li>
+                    <li>Cross-platform promotion</li>
+                    <li>Branding & marketing materials</li>
+                    <li>Community events</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-4 text-center">Extra Services</h3>
+                <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+                    <li>Performance optimization (improve stability)</li>
+                    <li>Security & anti-cheat measures</li>
+                    <li>Documentation & owner guides</li>
+                    <li>Tiered support: basic edits vs. full overhauls</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
@@ -138,67 +209,37 @@
         </a>
 
         <p>email: <em>norwalldesign@gmail.com</em></p>
-
-        <!-- Disclaimer -->
-        <div class="mt-6 text-sm text-gray-400 bg-gray-800 p-4 rounded-lg border border-gray-700">
-            <p><strong>Disclaimer:</strong> Prices listed do <u>not</u> include the cost of server rental or any premium
-                Discord bots.
-                I can provide free guidance on where to rent servers and find bots, and setup of those bots is fully
-                included in my fees.</p>
-        </div>
-
-        <!-- Contact Form -->
-        <!-- <form id="contact-form" onsubmit="sendEmail(event)"
-            class="bg-gray-800 p-6 rounded-xl shadow-lg text-left space-y-4">
-            <div>
-                <label for="name" class="block mb-1 font-medium">Name</label>
-                <input type="text" id="name" name="name" required
-                    class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 focus:ring-2 focus:ring-blue-600">
-            </div>
-            <div>
-                <label for="email" class="block mb-1 font-medium">Email</label>
-                <input type="email" id="email" name="email" required
-                    class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 focus:ring-2 focus:ring-blue-600">
-            </div>
-            <div>
-                <label for="message" class="block mb-1 font-medium">Message</label>
-                <textarea id="message" name="message" rows="4" required
-                    class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 focus:ring-2 focus:ring-blue-600"></textarea>
-            </div>
-            <button type="submit" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold">Send
-                Message</button>
-        </form> -->
-
-
-
     </section>
 
     <!-- Portfolio -->
     <section id="portfolio" class="max-w-5xl mx-auto py-20 px-6">
         <h2 class="text-3xl font-bold mb-10 text-center">My Work</h2>
 
-        <!-- Example Project -->
         <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-6">
-            <!-- Server Logo (round) -->
             <img src="./assets/monstersinc.webp" alt="Monsters.Inc Logo"
                 class="w-32 h-32 rounded-full border-4 border-gray-700 shadow-md" style="object-fit: cover;">
-
-            <!-- Details -->
             <div class="flex-1">
                 <h3 class="text-2xl font-semibold mb-2">Monsters.INC</h3>
                 <ul class="list-disc list-inside text-gray-300 mb-4">
+                    <li>Hardcore Server</li>
                     <li>2× Infected</li>
-                    <li>Vanilla+ loot pool</li>
-                    <li>Custom Discord with survival shop for basic needs & gear</li>
+                    <li>Vanilla loot pool</li>
+                    <li>Custom Discord with survival shop for basic gear</li>
+                    <li>Marketing Materials</li>
+                    <li>Website</li>
+
+
                 </ul>
                 <a href="https://discord.gg/V6T9RDdY"
                     class="inline-block bg-purple-600 hover:bg-purple-500 px-5 py-2 rounded-xl font-semibold">
                     Check Out the Discord
                 </a>
+                <br><br>
+                <p style="font-size: 14pt;"><strong>Total cost:</strong> $115 + $25/month for support</p>
+
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="bg-gray-950 text-center py-6 text-gray-400">
